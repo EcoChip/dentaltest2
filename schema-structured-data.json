@@ -1,0 +1,135 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dentist",
+      "@id": "https://dentistamorales.es/#organization",
+      "name": "Dentista Morales",
+      "legalName": "Dentista Morales S.L.P.",
+      "url": "https://dentistamorales.es",
+      "logo": "https://dentistamorales.es/assets/logo-morales.png",
+      "image": "https://dentistamorales.es/assets/clinica-equipo.jpg",
+      "description": "Clínica dental privada en Chamberí, Madrid. Especialistas en implantes dentales con garantía de por vida, ortodoncia invisible y sedación consciente.",
+      "telephone": "+34910123456",
+      "email": "hola@dentistamorales.es",
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Credit Card, Direct Debit, Financing",
+      "hasMap": "https://maps.google.com/?q=Calle+de+Fuencarral+123+Madrid",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle de Fuencarral 123, 1º Dcha",
+        "addressLocality": "Madrid",
+        "addressRegion": "Comunidad de Madrid",
+        "postalCode": "28010",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.4312,
+        "longitude": -3.7028
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "14:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "347"
+      },
+      "founder": {
+        "@type": "Physician",
+        "@id": "https://dentistamorales.es/#javier-morales",
+        "name": "Dr. Javier Morales",
+        "jobTitle": "Director Médico",
+        "medicalSpecialty": "Dentistry",
+        "identifier": "Col. 28001234 (COEM)",
+        "alumniOf": "Universidad Complutense de Madrid",
+        "knowsAbout": ["Implantología", "Odontología Integral", "Rehabilitación Oral"]
+      },
+      "medicalSpecialty": [
+        "Dentistry",
+        "Implantology",
+        "Orthodontics",
+        "Periodontics"
+      ]
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://dentistamorales.es/#lucia-fernandez",
+      "name": "Dra. Lucía Fernández",
+      "jobTitle": "Cirujana Bucal e Implantóloga",
+      "medicalSpecialty": "Implantology",
+      "identifier": "Col. 08005678 (COEM)",
+      "alumniOf": "Universidad de Barcelona",
+      "worksFor": {
+        "@id": "https://dentistamorales.es/#organization"
+      }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://dentistamorales.es/#andres-gomez",
+      "name": "Dr. Andrés Gómez",
+      "jobTitle": "Especialista en Ortodoncia Invisible",
+      "medicalSpecialty": "Orthodontics",
+      "identifier": "Col. 28004567 (COEM)",
+      "worksFor": {
+        "@id": "https://dentistamorales.es/#organization"
+      }
+    },
+    {
+      "@type": "MedicalProcedure",
+      "@id": "https://dentistamorales.es/implantes.html#procedure",
+      "name": "Colocación de Implante Dental Unitario con Corona de Zirconio",
+      "procedureType": "SurgicalProcedure",
+      "description": "Procedimiento de sustitución de raíz dental mediante tornillo de titanio biocompatible y corona personalizada.",
+      "bodyLocation": "Boca / Mandíbula",
+      "provider": {
+        "@id": "https://dentistamorales.es/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dentistamorales.es/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Duele ponerse un implante dental?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con anestesia local y la opción de sedación consciente no se siente dolor durante la cirugía. En los días posteriores se pueden experimentar molestias leves controlables con analgésicos comunes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto dura un implante de titanio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con una higiene adecuada y revisiones anuales periódicas, el implante de titanio dura toda la vida. Entregamos certificado de garantía por escrito."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Ofrecéis financiación sin intereses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, disponemos de opciones de financiación directa de hasta 24 meses sin intereses (0% TAE)."
+          }
+        }
+      ]
+    }
+  ]
+}

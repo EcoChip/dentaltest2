@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invisalign en CDMX | Ortodoncia Invisible 3D · Dr. Morales & Asociados</title>
+  <meta name="description" content="Ortodoncia invisible Invisalign en Ciudad de México (CDMX). Simulación 3D de tu sonrisa antes de empezar con escáner iTero. Valoración gratuita y planes a meses sin intereses en Dr. Morales & Asociados.">
+  <meta name="author" content="Dr. Morales & Asociados">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:title" content="Invisalign en CDMX | Simulación 3D de tu Sonrisa · Dr. Morales & Asociados">
+  <meta property="og:description" content="Descubre cómo se mueven tus dientes paso a paso con nuestra experiencia 3D interactiva de alineadores transparentes. Primera consulta con escáner 3D gratis en CDMX.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+
+  <!-- Tipografías de alto rendimiento y legibilidad sobria -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Hojas de estilo -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/invisalign.css">
+
+  <!-- Datos Estructurados JSON-LD (Schema.org MedicalProcedure & Dentist YMYL) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Dentist",
+        "@id": "https://dentistamorales.es/#organization-cdmx",
+        "name": "Dr. Morales & Asociados - Clínica Dental",
+        "url": "https://dentistamorales.es/invisalign.html",
+        "telephone": "+525512345678",
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Insurgentes Sur / Polanco",
+          "addressLocality": "Ciudad de México",
+          "addressRegion": "CDMX",
+          "postalCode": "06600",
+          "addressCountry": "MX"
+        },
+        "medicalSpecialty": ["Orthodontics", "Dentistry"]
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": "https://dentistamorales.es/invisalign.html#procedure",
+        "name": "Ortodoncia Invisible Invisalign con Alineadores Transparentes",
+        "procedureType": "NonSurgicalProcedure",
+        "description": "Tratamiento de alineación dental mediante férulas transparentes SmartTrack® extraíbles planificadas digitalmente con escaneo 3D.",
+        "howPerformed": "Planificación digital con software ClinCheck® y escáner intraoral 3D iTero, seguido de cambio secuencial de alineadores.",
+        "bodyLocation": "Boca / Dientes",
+        "provider": {
+          "@id": "https://dentistamorales.es/#organization-cdmx"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Estilos complementarios para la identidad CDMX y coherencia de colores -->
+  <style>
+    .cdmx-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(13, 148, 136, 0.12);
+      border: 1px solid rgba(13, 148, 136, 0.35);
+      color: #0d9488;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .text-gradient-clinic {
+      background: linear-gradient(135deg, #0e3b64 0%, #1976d2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================
+       TOPBAR & ENCABEZADO
+       ========================================================= -->
+  <div class="site-topbar" style="background-color: #0e3b64;">
+    <div class="container topbar-content">
+      <div class="topbar-links">
+        <a href="tel:5512345678" class="topbar-link" title="Llamada a clínica CDMX">
+          <span>📞</span> <strong>55 1234 5678</strong>
+        </a>
+        <a href="https://wa.me/525512345678?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20valoraci%C3%B3n%20de%20Invisalign" target="_blank" rel="noopener" class="topbar-link" title="WhatsApp Oficial">
+          <span>💬</span> WhatsApp: <strong>55 1234 5678</strong>
+        </a>
+      </div>
+      <div class="topbar-links">
+        <div class="status-pill" style="background: rgba(13, 148, 136, 0.2);">
+          <span class="status-dot" style="background-color: #5eead4; box-shadow: 0 0 6px #5eead4;"></span>
+          <span>Certificación Invisalign® Diamond Apex</span>
+        </div>
+        <span class="topbar-link" style="color: #93c5fd;">📍 Ciudad de México (CDMX)</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" style="border-bottom: 2px solid #0e3b64;">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" title="Dr. Morales & Asociados">
+        <!-- Icono de sonrisa estilizada SVG -->
+        <svg class="logo-doodle-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 10C7 16 7 26 12 34C14 37 16 38 18 30C19 25 21 24 22 24C23 24 25 25 26 30C28 38 30 37 32 34C37 26 37 16 32 10C27 4 17 4 12 10Z" stroke="#0e3b64" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff"/>
+          <path d="M16 22C18 25 26 25 28 22" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <span style="color: #0e3b64;">Dr. Morales & Asociados</span>
+          <span class="brand-subtext" style="color: #0d9488;">Ortodoncia & Alta Estética · CDMX</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li class="nav-dropdown">
+            <a href="invisalign.html" class="nav-link active">Ortodoncia Invisible ▾</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="invisalign.html#experiencia-3d">Simulación 3D Interactiva</a></li>
+              <li class="dropdown-item"><a href="#beneficios">Ventajas vs Brackets</a></li>
+              <li class="dropdown-item"><a href="#precios-cdmx">Precios y Financiamiento</a></li>
+              <li class="dropdown-item"><a href="implantes.html">Implantes Dentales</a></li>
+            </ul>
+          </li>
+          <li><a href="equipo.html" class="nav-link">Especialistas</a></li>
+          <li><a href="index.html#casos" class="nav-link">Casos Clínicos</a></li>
+          <li><a href="#contacto-invisalign" class="nav-link">Contacto</a></li>
+        </ul>
+        <a href="#contacto-invisalign" class="btn btn-conversion btn-sm">Agendar Simulación 3D</a>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e3b64" stroke-width="2.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         HERO SECTION: INTRODUCCIÓN A INVISALIGN CDMX
+         ========================================================= -->
+    <section class="section container" style="padding-top: 3.5rem; padding-bottom: 3rem;">
+      <div class="grid-asymmetric-2">
+        <div>
+          <div class="cdmx-hero-tag">
+            <span>✨ Tecnología SmartTrack® Original</span>
+          </div>
+          <h1 style="color: #0e3b64; font-size: clamp(2.2rem, 4.5vw, 3.4rem); line-height: 1.15; margin-bottom: 1rem;">
+            Alinea tus dientes en CDMX <span class="text-gradient-clinic">sin que nadie lo note</span> y con precisión 3D.
+          </h1>
+          <p class="text-lead" style="color: #334155; margin-bottom: 1.75rem;">
+            Dile adiós a los alambres metálicos, las llagas y las restricciones al comer. En <strong>Dr. Morales & Asociados</strong> planificamos cada fase de tu sonrisa de forma digital con escáner intraoral 3D iTero®.
+          </p>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2rem;">
+            <a href="#experiencia-3d" class="btn btn-conversion">
+              <span>Ver Simulación 3D Interactiva</span>
+              <span>↓</span>
+            </a>
+            <a href="https://wa.me/525512345678" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: #0e3b64; color: #0e3b64;">
+              <span>💬 Cotizar por WhatsApp</span>
+            </a>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;">
+            <div>
+              <div style="font-size: 1.4rem; font-weight: 800; color: #0e3b64;">100%</div>
+              <div style="font-size: 0.82rem; color: #64748b;">Invisible y removible para comer</div>
+            </div>
+            <div>
+              <div style="font-size: 1.4rem; font-weight: 800; color: #0d9488;">0 pastas</div>
+              <div style="font-size: 0.82rem; color: #64748b;">Escaneo digital en 3 minutos</div>
+            </div>
+            <div>
+              <div style="font-size: 1.4rem; font-weight: 800; color: #15803d;">MSI</div>
+              <div style="font-size: 0.82rem; color: #64748b;">Meses sin intereses en CDMX</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="position: relative;">
+          <div style="background: linear-gradient(135deg, #0e3b64, #1976d2); border-radius: 24px; padding: 1.5rem; color: #ffffff; box-shadow: 0 20px 40px -10px rgba(14, 59, 100, 0.25);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #5eead4;">Experiencia Interactiva</span>
+              <span style="font-size: 0.8rem; background: rgba(255,255,255,0.15); padding: 0.2rem 0.6rem; border-radius: 999px;">Scroll 3D</span>
+            </div>
+            <h3 style="color: #ffffff; font-size: 1.4rem; margin-bottom: 0.5rem;">Explora el movimiento de tus arcadas</h3>
+            <p style="font-size: 0.92rem; color: #e2e8f0; margin-bottom: 1.25rem;">
+              Hemos modelado en 3D la arcada superior (maxilar) y la inferior (mandíbula). Al hacer scroll, verás cómo se separan, rotan y ajustan los alineadores en tiempo real.
+            </p>
+            <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 1rem; border: 1px dashed rgba(255,255,255,0.25); font-size: 0.85rem;">
+              💡 <strong>Instrucciones:</strong> Desliza la página hacia abajo suavemente para activar las 5 etapas del tratamiento.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECCIÓN PRINCIPAL: SCROLL STORYTELLING 3D CON THREE.JS
+         ========================================================= -->
+    <section id="invisalign-3d-section" class="invisalign-story-section" aria-label="Simulación 3D interactiva del tratamiento con Invisalign">
+      <div class="story-sticky-container">
+        
+        <!-- Contenedor del Canvas WebGL -->
+        <div id="invisalign-canvas-wrapper" class="canvas-wrapper">
+          <!-- Poster estático y barra de progreso durante la carga -->
+          <div id="invisalign-poster" class="invisalign-poster" aria-hidden="true">
+            <div class="poster-graphic">
+              <!-- Icono SVG sobrio de arcada/diente -->
+              <svg class="poster-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C8 2 4 6 4 12c0 4 2 8 4 9 1.5.8 2.5-1 4-1s2.5 1.8 4 1c2-1 4-5 4-9 0-6-4-10-8-10z"/>
+                <path d="M8 10c1.5 2 6.5 2 8 0"/>
+              </svg>
+              <h4 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 0.25rem;">Inicializando Modelo Clínico 3D</h4>
+              <p class="poster-text" id="invisalign-progress-text">Cargando arcadas superior e inferior (0%)...</p>
+              
+              <div class="poster-loader-track">
+                <div class="poster-loader-bar" id="invisalign-progress-bar"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Canvas WebGL optimizado (sin filtros CSS pesados) -->
+          <canvas id="invisalign-canvas" aria-label="Visualización 3D interactiva de las arcadas dentales con alineadores transparentes Invisalign"></canvas>
+
+          <!-- Fallback estático para prefers-reduced-motion o cuando ENABLE_INVISALIGN_3D = false -->
+          <div id="invisalign-static-fallback" class="static-fallback" style="display: none; padding: 2rem;">
+            <div style="max-width: 600px; margin: 0 auto; text-align: center; color: #ffffff;">
+              <h3>Tratamiento Paso a Paso con Invisalign</h3>
+              <p>Visualización optimizada para dispositivos con movimiento reducido o modo estático.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjetas de Storytelling superpuestas (HTML acelerado por GPU) -->
+        <div class="story-steps-container">
+          
+          <!-- ETAPA 1 -->
+          <article class="story-card is-active" data-step="1">
+            <span class="step-badge">Fase 1 · Diagnóstico Clínico</span>
+            <h2 class="step-title">Así es tu sonrisa antes del tratamiento</h2>
+            <p class="step-desc">
+              Apiñamiento, mordida cruzada, diastemas o sobremordida. Evaluamos la posición anatómica inicial de tus arcadas mediante escaneo digital tridimensional en Ciudad de México.
+            </p>
+          </article>
+
+          <!-- ETAPA 2 -->
+          <article class="story-card" data-step="2">
+            <span class="step-badge">Fase 2 · Planificación Digital</span>
+            <h2 class="step-title">Escaneamos tu boca en 3D y planificamos cada movimiento</h2>
+            <p class="step-desc">
+              Las arcadas se separan y analizan individualmente. Con el software ClinCheck® calculamos la trayectoria de cada diente con exactitud submilimétrica antes de fabricar tus alineadores.
+            </p>
+          </article>
+
+          <!-- ETAPA 3 -->
+          <article class="story-card" data-step="3">
+            <span class="step-badge">Fase 3 · Fuerza Controlada</span>
+            <h2 class="step-title">Cada alineador mueve tus dientes milímetros exactos</h2>
+            <p class="step-desc">
+              El material multicapa patentado SmartTrack® aplica fuerzas constantes y biológicamente amigables. Cada cambio de férula (cada 7 a 10 días) avanza hacia la posición ideal sin dolor agudo.
+            </p>
+          </article>
+
+          <!-- ETAPA 4 -->
+          <article class="story-card" data-step="4">
+            <span class="step-badge">Fase 4 · Estética y Discreción</span>
+            <h2 class="step-title">En 6 a 18 meses, sin brackets y sin que nadie lo note</h2>
+            <p class="step-desc">
+              Totalmente transparentes desde cualquier ángulo de visión. Continúas con tu vida social, reuniones y comidas favoritas retirando tus alineadores con un solo movimiento.
+            </p>
+          </article>
+
+          <!-- ETAPA 5 -->
+          <article class="story-card" data-step="5">
+            <span class="step-badge">Fase 5 · Oclusión Perfecta</span>
+            <h2 class="step-title">Sonrisa alineada. Cita tu valoración gratuita</h2>
+            <p class="step-desc">
+              Mordida armónica, mejor salud periodontal y una estética natural duradera. Nuestro equipo de ortodoncistas en CDMX te acompaña en cada revisión.
+            </p>
+            <div class="step-actions">
+              <a href="#contacto-invisalign" class="btn btn-conversion">Pedir mi valoración gratuita</a>
+              <a href="https://wa.me/525512345678" target="_blank" rel="noopener" class="btn btn-outline-light">💬 WhatsApp directo</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Indicador de Puntos Lateral -->
+        <div class="story-dots-indicator" aria-hidden="true">
+          <div class="story-dot is-active"></div>
+          <div class="story-dot"></div>
+          <div class="story-dot"></div>
+          <div class="story-dot"></div>
+          <div class="story-dot"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         COMPARATIVA: INVISALIGN VS BRACKETS TRADICIONALES
+         ========================================================= -->
+    <section id="beneficios" class="section container">
+      <div style="max-width: 720px; margin: 0 auto 2.5rem auto; text-align: center;">
+        <span class="cdmx-hero-tag">Comparativa Médica</span>
+        <h2 style="color: #0e3b64;">¿Por qué elegir alineadores sobre brackets convencionales?</h2>
+        <p class="text-muted">La ortodoncia moderna prioriza la comodidad del paciente y la higiene sin sacrificar los resultados clínicos.</p>
+      </div>
+
+      <div class="hand-table-wrapper" style="border-color: #0e3b64;">
+        <table class="hand-table">
+          <thead>
+            <tr>
+              <th style="color: #0d9488; font-size: 1.15rem;">✨ Invisalign® (Dr. Morales & Asociados)</th>
+              <th style="color: #64748b; font-size: 1.15rem;">⛓️ Brackets Metálicos Antiguos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>100% Removible:</strong> Te los retiras para comer, tomar café y cepillarte a fondo.</td>
+              <td><strong>Fijos:</strong> La comida queda atrapada entre alambres y bandas metálicas.</td>
+            </tr>
+            <tr>
+              <td><strong>Cero emergencias por alambres:</strong> Sin brackets que se despegan ni arcos que pinchan la mucosa.</td>
+              <td><strong>Urgencias frecuentes:</strong> Llagas, rozaduras y visitas de urgencia por brackets rotos.</td>
+            </tr>
+            <tr>
+              <td><strong>Visualización previa en 3D:</strong> Sabes exactamente cómo quedará tu sonrisa antes del primer día.</td>
+              <td><strong>Incertidumbre:</strong> El resultado solo se comprueba al retirar los brackets tras años de uso.</td>
+            </tr>
+            <tr>
+              <td><strong>Higiene completa con hilo dental:</strong> Limpieza dental sin obstáculos interproximales.</td>
+              <td><strong>Dificultad de higiene:</strong> Mayor propensión a manchas blancas, sarro y desmineralización.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PRECIOS Y FINANCIAMIENTO CDMX (MESES SIN INTERESES)
+         ========================================================= -->
+    <section id="precios-cdmx" class="section section--tint">
+      <div class="container">
+        <div style="background: #ffffff; border: 2px solid #0e3b64; border-radius: 20px; padding: clamp(1.5rem, 4vw, 3rem); box-shadow: 0 10px 25px rgba(14, 59, 100, 0.08); max-width: 900px; margin: 0 auto;">
+          <div class="grid-asymmetric-2">
+            <div>
+              <span class="cdmx-hero-tag" style="background: rgba(21, 128, 61, 0.1); color: #15803d; border-color: rgba(21, 128, 61, 0.3);">Presupuesto Transparente CDMX</span>
+              <h2 style="color: #0e3b64; font-size: 1.85rem; margin-bottom: 0.5rem;">Tratamiento Integral Invisalign®</h2>
+              <p style="color: #475569; font-size: 0.95rem; margin-bottom: 1.25rem;">
+                Incluye estudio completo, escaneo 3D iTero, simulación digital ClinCheck®, todos los alineadores necesarios y juego de retenedores Vivera® finales.
+              </p>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem; color: #1e293b;">
+                <li>✔️ Consulta diagnóstica y escáner 3D inicial sin costo.</li>
+                <li>✔️ Alineadores SmartTrack® de recambio ilimitados durante el plan.</li>
+                <li>✔️ Monitoreo digital mensual y citas presenciales en clínica.</li>
+                <li>✔️ Limpieza dental profunda previa al inicio.</li>
+                <li>✔️ Garantía clínica de satisfacción en alineación.</li>
+              </ul>
+            </div>
+
+            <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 16px; padding: 1.75rem; display: flex; flex-direction: column; justify-content: center;">
+              <div style="font-size: 0.85rem; font-weight: 700; color: #64748b; text-transform: uppercase;">Facilidades de Pago</div>
+              <div style="font-size: 2.2rem; font-weight: 800; color: #0e3b64; margin: 0.5rem 0;">
+                Hasta 12 y 18 MSI
+              </div>
+              <p style="font-size: 0.88rem; color: #475569; margin-bottom: 1.25rem;">
+                Aceptamos todas las tarjetas de crédito bancarias participantes en México (BBVA, Banorte, Santander, Citibanamex, American Express).
+              </p>
+              <a href="#contacto-invisalign" class="btn btn-conversion btn-block">Agendar Valoración 3D Gratuita</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FORMULARIO DE CONTACTO / CITAS CDMX
+         ========================================================= -->
+    <section id="contacto-invisalign" class="section container" style="padding-bottom: 5rem;">
+      <div class="contact-card-box grid-asymmetric-2" style="background: #f8fafc; border-color: #0e3b64;">
+        <div>
+          <span class="cdmx-hero-tag">Diagnóstico Sin Costo</span>
+          <h2 style="color: #0e3b64;">Agenda tu simulación digital 3D en Ciudad de México</h2>
+          <p class="text-lead" style="color: #334155; margin-bottom: 1.5rem;">
+            En tu primera cita escanearemos tu boca en 3D y podrás ver en la pantalla cómo se transformará tu sonrisa antes de tomar cualquier decisión.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <a href="tel:5512345678" class="btn btn-outline" style="border-color: #0e3b64; color: #0e3b64; justify-content: flex-start;">
+              <span>📞 Teléfono: 55 1234 5678</span>
+            </a>
+            <a href="https://wa.me/525512345678?text=Hola,%20deseo%20mi%20valoraci%C3%B3n%20de%20Invisalign" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: #15803d; color: #15803d; justify-content: flex-start;">
+              <span>💬 WhatsApp directo para citas</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <form class="js-lead-form" style="background: #ffffff; padding: 2rem; border: 2px solid #0e3b64; border-radius: 16px; box-shadow: 0 10px 25px rgba(14, 59, 100, 0.08);">
+            <h3 style="color: #0e3b64; font-size: 1.3rem; margin-bottom: 1rem;">Solicitud de Valoración 3D</h3>
+
+            <div class="form-group">
+              <label for="inv-lead-name" class="form-label" style="color: #0e3b64;">Nombre completo *</label>
+              <input type="text" id="inv-lead-name" name="nombre" class="form-input" placeholder="Ej. Mariana Soto" required>
+            </div>
+
+            <div class="form-group">
+              <label for="inv-lead-phone" class="form-label" style="color: #0e3b64;">Teléfono celular (WhatsApp) *</label>
+              <input type="tel" id="inv-lead-phone" name="telefono" class="form-input" placeholder="Ej. 55 1234 5678" required>
+            </div>
+
+            <div class="form-group">
+              <label for="inv-lead-zone" class="form-label" style="color: #0e3b64;">Zona de preferencia en CDMX</label>
+              <select id="inv-lead-zone" name="zona" class="form-select">
+                <option value="polanco">Sucursal Polanco</option>
+                <option value="insurgentes">Sucursal Insurgentes / Del Valle</option>
+                <option value="roma">Sucursal Roma - Condesa</option>
+              </select>
+            </div>
+
+            <div class="rgpd-checkbox-group" style="background: #f1f5f9; border-color: #cbd5e1;">
+              <div class="rgpd-item">
+                <input type="checkbox" id="rgpd-inv" name="rgpd_consent" required>
+                <label for="rgpd-inv" style="font-size: 0.84rem; color: #334155;">
+                  Acepto el <strong>Aviso de Privacidad</strong> para ser contactado/a exclusivamente para coordinar mi cita de valoración conforme a la ley mexicana (LFPDPPP).
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-conversion btn-block">
+              Confirmar mi cita con escaneo 3D
+            </button>
+            <span class="btn-microcopy" style="color: #64748b;">Respuesta en menos de 2 horas hábiles.</span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer" style="background-color: #081e35;">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-title" style="color: #ffffff;">🦷 Dr. Morales & Asociados</h3>
+          <p style="font-size: 0.92rem; color: #94a3b8; margin-bottom: 0.75rem;">
+            Clínica dental especializada en ortodoncia invisible y rehabilitación estética en Ciudad de México (CDMX).
+          </p>
+          <div style="font-size: 0.85rem; color: #64748b;">
+            <p>🇲🇽 <strong>Sede Central CDMX:</strong> Av. Insurgentes Sur / Polanco</p>
+            <p>👨‍⚕️ <strong>Especialidad:</strong> Ortodoncia y Ortopedia Dentomaxilofacial</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Tratamientos</h4>
+          <ul class="footer-links-list">
+            <li><a href="invisalign.html">Invisalign® Ortodoncia Invisible</a></li>
+            <li><a href="implantes.html">Implantes Dentales</a></li>
+            <li><a href="index.html#estetica">Diseño de Sonrisa</a></li>
+            <li><a href="index.html#sedacion">Sedación Odontológica</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navegación</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="equipo.html">Equipo de Especialistas</a></li>
+            <li><a href="contacto.html">Ubicaciones y Citas</a></li>
+            <li><a href="invisalign.html#experiencia-3d">Simulador 3D</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contacto Directo</h4>
+          <p style="font-size: 0.92rem; color: #cbd5e1; margin-bottom: 0.4rem;">📞 <a href="tel:5512345678" style="color: #60a5fa;">55 1234 5678</a></p>
+          <p style="font-size: 0.92rem; color: #cbd5e1; margin-bottom: 0.4rem;">💬 <a href="https://wa.me/525512345678" style="color: #5eead4;">WhatsApp: 55 1234 5678</a></p>
+          <p style="font-size: 0.92rem; color: #cbd5e1;">✉️ citas@doctormorales.com.mx</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar" style="border-top-color: rgba(255,255,255,0.1);">
+        <div>© 2026 Dr. Morales & Asociados S.A. de C.V. Todos los derechos reservados.</div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="#">Aviso de Privacidad (LFPDPPP)</a>
+          <a href="#">Términos Clínicos</a>
+          <a href="#">Permiso de Publicidad Sanitaria</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Carga de librerías locales de alto rendimiento (Three.js, GLTFLoader, DRACOLoader, GSAP, ScrollTrigger) -->
+  <script src="assets/vendor/three.min.js"></script>
+  <script src="assets/vendor/GLTFLoader.js"></script>
+  <script src="assets/vendor/DRACOLoader.js"></script>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+
+  <!-- Script base del sitio para menús y validaciones -->
+  <script src="scripts.js"></script>
+
+  <!-- Módulo 3D aislado con flag de reversión y storytelling sincronizado -->
+  <script src="js/invisalign-story.js"></script>
+</body>
+</html>

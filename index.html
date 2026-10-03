@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dentista Morales | Tu dentista sin dramas en Chamberí, Madrid</title>
+  <meta name="description" content="Clínica dental en Calle Fuencarral 123 (Chamberí). Implantes con garantía por escrito, ortodoncia invisible y sedación consciente. Primera visita y diagnóstico gratuitos.">
+  <meta name="author" content="Dr. Javier Morales - Col. 28001234">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Redes Sociales con personalidad -->
+  <meta property="og:title" content="Dentista Morales | Odontología cercana y honesta en Chamberí">
+  <meta property="og:description" content="20 años arreglando bocas sin juicios ni dolor. Primera consulta de valoración gratuita en Fuencarral 123.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Tipografías seleccionadas: Fraunces (serif editorial con carácter) + Plus Jakarta Sans + Caveat (anotaciones a mano) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Datos Estructurados JSON-LD (YMYL / E-E-A-T Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dentista Morales",
+    "image": "https://dentistamorales.es/assets/clinica-equipo.jpg",
+    "@id": "https://dentistamorales.es",
+    "url": "https://dentistamorales.es",
+    "telephone": "+34910123456",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle de Fuencarral 123",
+      "addressLocality": "Madrid",
+      "addressRegion": "Madrid",
+      "postalCode": "28010",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.4312,
+      "longitude": -3.7028
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "14:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "347"
+    },
+    "medicalSpecialty": [
+      "Dentistry",
+      "Implantology",
+      "Orthodontics",
+      "Periodontics"
+    ],
+    "founder": {
+      "@type": "Physician",
+      "name": "Dr. Javier Morales",
+      "medicalSpecialty": "Dentistry",
+      "identifier": "Col. 28001234 (COEM)",
+      "alumniOf": "Universidad Complutense de Madrid"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================
+       BLOQUE 1: CABECERA FIJA Y TOPBAR HUMANA
+       ========================================================= -->
+  <div class="site-topbar">
+    <div class="container topbar-content">
+      <div class="topbar-links">
+        <a href="tel:910123456" class="topbar-link" title="Llámanos directamente">
+          <span>📞</span> <strong>910 123 456</strong>
+        </a>
+        <a href="https://wa.me/34612345678" target="_blank" rel="noopener noreferrer" class="topbar-link" title="Escríbenos por WhatsApp">
+          <span>💬</span> WhatsApp: <strong>612 345 678</strong>
+        </a>
+      </div>
+      <div class="topbar-links">
+        <div id="clinic-status-pill" class="status-pill">
+          <span class="status-dot"></span> <span>Abierto hoy hasta las 20:00</span>
+        </div>
+        <a href="contacto.html#urgencias" class="topbar-link" style="color: var(--color-mustard);">
+          <span>🚨</span> Urgencias dentales (Chamberí)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logo con Diente a mano alzada (Anti-IA: No es un logo vectorial genérico) -->
+      <a href="index.html" class="brand-logo" title="Dentista Morales - Clic 5 veces para un secreto">
+        <svg class="logo-doodle-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 10C7 16 7 26 12 34C14 37 16 38 18 30C19 25 21 24 22 24C23 24 25 25 26 30C28 38 30 37 32 34C37 26 37 16 32 10C27 4 17 4 12 10Z" stroke="#203B31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#FFFDF9"/>
+          <!-- Ojos y sonrisa garabateada -->
+          <circle cx="17" cy="15" r="1.5" fill="#C85A32"/>
+          <circle cx="27" cy="15" r="1.5" fill="#C85A32"/>
+          <path d="M18 20C20 22 24 22 26 20" stroke="#C85A32" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <span>Dentista Morales</span>
+          <span class="brand-subtext">Chamberí · Desde 2005</span>
+        </div>
+      </a>
+
+      <!-- Navegación de escritorio -->
+      <nav class="nav-desktop" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Inicio</a></li>
+          <li class="nav-dropdown">
+            <a href="#tratamientos" class="nav-link">Tratamientos ▾</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="implantes.html">Implantes Dentales</a></li>
+              <li class="dropdown-item"><a href="invisalign.html">Ortodoncia Invisible (Invisalign 3D)</a></li>
+              <li class="dropdown-item"><a href="#estetica">Carillas & Estética</a></li>
+              <li class="dropdown-item"><a href="#periodoncia">Periodoncia & Encías</a></li>
+              <li class="dropdown-item"><a href="#sedacion">Sedación Consciente</a></li>
+            </ul>
+          </li>
+          <li><a href="equipo.html" class="nav-link">Equipo Médico</a></li>
+          <li><a href="#casos" class="nav-link">Resultados Reales</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+        <a href="#pedir-cita" class="btn btn-terracotta btn-sm">Pide cita ya</a>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         BLOQUE 2: HERO (ABOVE THE FOLD - VOZ HUMANA Y CALIDEZ)
+         ========================================================= -->
+    <section class="hero-section container">
+      <div class="grid-asymmetric-2">
+        <div class="hero-copy">
+          <div class="hero-tag">
+            <span>📍 Fuencarral 123, Chamberí</span>
+          </div>
+          <h1 class="hero-title">
+            Dentista en Chamberí que no te hará <span class="underline-sketch">sentir culpable</span> por no usar hilo dental.
+          </h1>
+          <p class="text-lead">
+            En Dentista Morales llevamos 20 años arreglando bocas sin dramas ni juzgar a nadie. Implantes garantizados, ortodoncia invisible y limpiezas minuciosas. Primera valoración completa gratuita y sin letra pequeña.
+          </p>
+
+          <!-- Formulario de captación rápida (3 campos con microcopy humano) -->
+          <div class="hero-fast-form">
+            <form class="fast-form-grid js-lead-form">
+              <div>
+                <label for="hero-name" class="sr-only">Tu nombre</label>
+                <input type="text" id="hero-name" name="nombre" class="form-input" placeholder="Tu nombre" required>
+              </div>
+              <div>
+                <label for="hero-phone" class="sr-only">Teléfono de contacto</label>
+                <input type="tel" id="hero-phone" name="telefono" class="form-input" placeholder="Tu teléfono móvil" required>
+              </div>
+              <div>
+                <label for="hero-motive" class="sr-only">¿Qué te preocupa?</label>
+                <select id="hero-motive" name="motivo" class="form-select">
+                  <option value="implante">Me falta una pieza / Implantes</option>
+                  <option value="ortodoncia">Quiero alinear dientes (Invisalign)</option>
+                  <option value="dolor">Tengo dolor / Molestia urgente</option>
+                  <option value="limpieza">Revisión general y limpieza</option>
+                  <option value="miedo">Tengo fobia y busco sedación</option>
+                </select>
+              </div>
+              <div>
+                <button type="submit" class="btn btn-mustard">
+                  Quiero mi valoración gratis
+                </button>
+              </div>
+            </form>
+            <span class="btn-microcopy">
+              🔒 Sin compromiso. No te vamos a bombardear con llamadas comerciales ni correos pesados.
+            </span>
+          </div>
+
+          <!-- Elementos de Confianza E-E-A-T -->
+          <div class="hero-trust-row">
+            <div class="trust-rating">
+              <span class="trust-stars">★★★★★</span>
+              <span>4.9 / 5</span>
+              <span class="text-muted">(347 pacientes en Google)</span>
+            </div>
+            <div class="trust-badge-text">
+              🏛️ Registro Sanitario: <strong>NICA 12345</strong> · Dr. Javier Morales (Col. 28001234)
+            </div>
+          </div>
+        </div>
+
+        <!-- Marco Fotográfico Imperfecto / Foto con aspecto analógico -->
+        <div class="hero-media-wrapper">
+          <div class="photo-tape-card">
+            <div class="photo-frame">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Dr. Javier Morales y equipo sonriendo en el gabinete de Dentista Morales en Chamberí" loading="eager" width="800" height="500">
+            </div>
+            <p class="photo-caption">«El equipo un martes por la mañana antes de empezar con los cafés.»</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BLOQUE 3: BADGES DE CONFIANZA / PEGATINAS ROTADAS
+         ========================================================= -->
+    <section class="section--tint" style="padding: 1.5rem 0;">
+      <div class="container">
+        <div class="stickers-wrapper">
+          <div class="sticker-badge">
+            <span>🌿</span> Miembro Activo SEPA
+          </div>
+          <div class="sticker-badge">
+            <span>⭐</span> Google 4.9 (347 Reseñas reales)
+          </div>
+          <div class="sticker-badge">
+            <span>📋</span> Presupuesto Cerrado por Escrito
+          </div>
+          <div class="sticker-badge">
+            <span>🛡️</span> Garantía de por Vida en Implantes
+          </div>
+          <div class="sticker-badge">
+            <span>💳</span> Financiación 0% hasta 24 meses
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BLOQUE 4: TRATAMIENTOS DESTACADOS (GRID ASIMÉTRICO)
+         ========================================================= -->
+    <section id="tratamientos" class="section container">
+      <div style="max-width: 680px;">
+        <span class="text-hand">Lo que mejor se nos da</span>
+        <h2>Tratamientos claros, sin rodeos ni presupuestos inflados</h2>
+        <p class="text-muted">Precios transparentes y orientativos. Te entregamos un diagnóstico completo y presupuesto cerrado antes de tocar nada en tu boca.</p>
+      </div>
+
+      <div class="treatment-grid-asym">
+        <!-- Tarjeta 1 (Grande / Destacada): Implantes -->
+        <article class="treatment-card treatment-card--featured">
+          <div>
+            <span class="treatment-badge-tag" style="background-color: #F8D8CE;">Tratamiento Estrella</span>
+            <h3>Implantes Dentales con Carga Inmediata</h3>
+            <p style="margin-top: 0.5rem; color: #383431;">
+              Recupera la fuerza para masticar y sonreír en el mismo día. Usamos titanio biocompatible de grado médico con garantía por escrito de por vida. Si tienes fobia, añadimos sedación consciente.
+            </p>
+            <div class="treatment-price">
+              Desde 1.200 € <small>(Cirugía + Aditamento + Corona a medida)</small>
+            </div>
+          </div>
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <a href="implantes.html" class="btn btn-terracotta btn-sm">Ver cómo lo hacemos (sin tecnicismos) →</a>
+            <span class="text-muted" style="font-size: 0.85rem;">Financiación desde 50 €/mes</span>
+          </div>
+        </article>
+
+        <!-- Tarjeta 2: Ortodoncia Invisible -->
+        <article class="treatment-card treatment-card--col-5" id="ortodoncia">
+          <div>
+            <span class="treatment-badge-tag" style="background-color: #E6EDDE;">Sin Brackets Metálicos</span>
+            <h3>Ortodoncia Invisible</h3>
+            <p style="margin-top: 0.5rem; color: #383431;">
+              Alineadores transparentes y extraíbles. Comes lo que quieras, nadie nota que los llevas y la media de tratamiento en clínica es de 8 a 14 meses.
+            </p>
+            <div class="treatment-price">
+              Desde 2.500 € <small>(Plan completo y retenedores incluidos)</small>
+            </div>
+          </div>
+          <div style="margin-top: 1.5rem; display: flex; gap: 0.6rem; flex-wrap: wrap;">
+            <a href="invisalign.html" class="btn btn-mustard btn-sm">Ver simulación 3D →</a>
+            <a href="contacto.html?tratamiento=ortodoncia" class="btn btn-outline btn-sm">Pedir valoración</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 3: Carillas -->
+        <article class="treatment-card treatment-card--col-4" id="estetica">
+          <div>
+            <span class="treatment-badge-tag">Estética Natural</span>
+            <h3>Carillas de Porcelana</h3>
+            <p style="color: #383431;">
+              Diseñadas diente a diente para igualar el tono natural sin que parezca una dentadura postiza de televisión.
+            </p>
+            <div class="treatment-price">
+              Desde 450 € <small>/ pieza</small>
+            </div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <a href="contacto.html?tratamiento=carillas" class="btn btn-outline btn-sm">Diseño de sonrisa</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 4: Blanqueamiento -->
+        <article class="treatment-card treatment-card--col-4">
+          <div>
+            <span class="treatment-badge-tag">Luz Fría + Férulas</span>
+            <h3>Blanqueamiento Dental</h3>
+            <p style="color: #383431;">
+              Sesión clínica de 45 minutos más kit de refuerzo para casa. Sin sensibilidad extrema posterior.
+            </p>
+            <div class="treatment-price">
+              Desde 250 € <small>(Tratamiento dual completo)</small>
+            </div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <a href="contacto.html?tratamiento=blanqueamiento" class="btn btn-outline btn-sm">Consultar opciones</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 5: Periodoncia -->
+        <article class="treatment-card treatment-card--col-4" id="periodoncia">
+          <div>
+            <span class="treatment-badge-tag">Salud de Encías</span>
+            <h3>Periodoncia Avanzada</h3>
+            <p style="color: #383431;">
+              Para que no te sangren las encías ni se te muevan las piezas. Limpiezas profundas por cuadrantes sin dolor.
+            </p>
+            <div class="treatment-price">
+              Desde 80 € <small>/ cuadrante</small>
+            </div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <a href="contacto.html?tratamiento=periodoncia" class="btn btn-outline btn-sm">Revisar encías</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BLOQUE 5: ANTES / DESPUÉS CON TOQUE HUMANO
+         ========================================================= -->
+    <section id="casos" class="section section--tint">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 2.5rem auto;">
+          <span class="text-hand">Bocas reales, sin retoques falsos</span>
+          <h2>Casos reales tratados en la clínica</h2>
+          <p class="text-muted">
+            Fotos tomadas en gabinete con luz clínica habitual. Nada de filtros de Instagram ni imágenes de archivo irreales.
+          </p>
+        </div>
+
+        <div class="case-card-wrapper">
+          <div class="case-grid-compare">
+            <div class="case-image-box">
+              <span class="case-label case-label--before">Antes del tratamiento</span>
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=700&q=80" alt="Caso de pérdida de incisivo superior antes de tratamiento de implante" loading="lazy">
+            </div>
+            <div class="case-image-box">
+              <span class="case-label case-label--after">Resultado a los 3 meses</span>
+              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=700&q=80" alt="Resultado de implante dental con corona de zirconio terminada" loading="lazy">
+            </div>
+          </div>
+          <div class="case-details-row">
+            <div>
+              <strong>Tratamiento:</strong> Implante unitario en incisivo central + corona de zirconio monolítico.
+            </div>
+            <div>
+              <strong>Duración:</strong> 2 sesiones quirúrgicas · 10 semanas de integración total.
+            </div>
+            <div>
+              <strong>Cirujana:</strong> Dra. Lucía Fernández (Col. 08005678).
+            </div>
+          </div>
+        </div>
+
+        <p class="text-muted" style="text-align: center; font-size: 0.82rem; margin-top: 1rem;">
+          ⚖️ <em>Nota legal:</em> Los resultados pueden variar según el estado de salud óseo y periodontal de cada paciente. Fotografías publicadas bajo consentimiento informado expreso conforme al RGPD. No prometemos milagros, pero nos dejamos la piel en cada caso.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BLOQUE 6: "POR QUÉ ELEGIRNOS" (PROPUESTA CON HUMOR SUTIL)
+         ========================================================= -->
+    <section class="section container">
+      <div style="max-width: 650px;">
+        <span class="text-hand">Diferencias que se notan en el sillón</span>
+        <h2>¿Por qué la gente de Chamberí confía en nosotros?</h2>
+        <p class="text-muted">Hablamos claro, no metemos prisas y entendemos perfectamente lo que cuesta entrar por la puerta.</p>
+      </div>
+
+      <div class="reasons-grid">
+        <div class="reason-item">
+          <div class="reason-doodle">
+            <span style="font-size: 1.6rem;">☕</span>
+          </div>
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.3rem;">No somos una franquicia</h3>
+            <p class="text-muted">Somos una clínica de barrio independiente. Siempre te atenderá el mismo doctor y te llamaremos por tu nombre, no por un número de expediente.</p>
+          </div>
+        </div>
+
+        <div class="reason-item">
+          <div class="reason-doodle">
+            <span style="font-size: 1.6rem;">😴</span>
+          </div>
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.3rem;">Sin dolor (o casi)</h3>
+            <p class="text-muted">Contamos con sedación consciente monitorizada para cirugías e implantes. El miedo se queda en el paragüero de la entrada.</p>
+          </div>
+        </div>
+
+        <div class="reason-item">
+          <div class="reason-doodle">
+            <span style="font-size: 1.6rem;">✍️</span>
+          </div>
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.3rem;">Garantía por escrito</h3>
+            <p class="text-muted">Nuestros implantes de titanio tienen garantía de por vida. Si surge cualquier problema imprevisto, lo resolvemos sin costes ocultos.</p>
+          </div>
+        </div>
+
+        <div class="reason-item">
+          <div class="reason-doodle">
+            <span style="font-size: 1.6rem;">💶</span>
+          </div>
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.3rem;">Financiación 0% real</h3>
+            <p class="text-muted">Hasta 24 meses sin intereses y sin intermediarios bancarios agresivos. La salud de tu boca no debería depender de un mal mes económico.</p>
+          </div>
+        </div>
+
+        <div class="reason-item">
+          <div class="reason-doodle">
+            <span style="font-size: 1.6rem;">🔍</span>
+          </div>
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.3rem;">Presupuesto cerrado</h3>
+            <p class="text-muted">Lo que firmamos en la primera consulta es lo que pagas. Jamás te encontrarás suplementos sorpresa de anestesia o radiografías.</p>
+          </div>
+        </div>
+
+        <div class="reason-item">
+          <div class="reason-doodle">
+            <span style="font-size: 1.6rem;">🏘️</span>
+          </div>
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.3rem;">Más de 1.000 vecinos</h3>
+            <p class="text-muted">Desde 2005 en la Calle Fuencarral. Gran parte de nuestros pacientes son familias enteras, abuelos, hijos y nietos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BLOQUE 7: EQUIPO MÉDICO (PREVIEW HUMANO)
+         ========================================================= -->
+    <section class="section section--tint">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+          <div>
+            <span class="text-hand">Personas antes que batas</span>
+            <h2>El equipo médico que te va a atender</h2>
+            <p class="text-muted">Con número de colegiado oficial, formación continua y vidas normales fuera de la clínica.</p>
+          </div>
+          <a href="equipo.html" class="btn btn-outline btn-sm">Ver biografía de todos (son buena gente) →</a>
+        </div>
+
+        <div class="team-grid">
+          <!-- Dr. Javier Morales -->
+          <article class="team-card">
+            <div class="team-photo-wrapper">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" alt="Dr. Javier Morales, Director Médico" loading="lazy">
+              <div class="team-badge-quirk">🚲 Pésimo cocinando, feliz sobre la bici</div>
+            </div>
+            <h3 class="team-name">Dr. Javier Morales</h3>
+            <span class="team-role">Director Médico & Odontología Integral</span>
+            <span class="team-col">Licenciado UCM · Colegiado nº 28001234</span>
+            <p class="team-bio">
+              20 años arreglando dientes y 30 intentando mejorar su revés de tenis. Su mayor orgullo: más de 1.000 bocas rehabilitadas sin dramas.
+            </p>
+          </article>
+
+          <!-- Dra. Lucía Fernández -->
+          <article class="team-card">
+            <div class="team-photo-wrapper">
+              <img src="https://images.unsplash.com/photo-1594824813589-98e3b5e40a02?auto=format&fit=crop&w=600&q=80" alt="Dra. Lucía Fernández, Cirujana e Implantóloga" loading="lazy">
+              <div class="team-badge-quirk">🎶 Toca el ukelele en los descansos</div>
+            </div>
+            <h3 class="team-name">Dra. Lucía Fernández</h3>
+            <span class="team-role">Cirugía Oral & Máster en Implantología</span>
+            <span class="team-col">Máster Univ. Barcelona · Colegiada nº 08005678</span>
+            <p class="team-bio">
+              12 años de experiencia quirúrgica. Dice que poner un implante perfecto exige la misma precisión y sentido del ritmo que afinar un acorde.
+            </p>
+          </article>
+
+          <!-- Dr. Andrés Gómez -->
+          <article class="team-card">
+            <div class="team-photo-wrapper">
+              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80" alt="Dr. Andrés Gómez, Especialista en Ortodoncia" loading="lazy">
+              <div class="team-badge-quirk">🧩 Fanático de los rompecabezas difíciles</div>
+            </div>
+            <h3 class="team-name">Dr. Andrés Gómez</h3>
+            <span class="team-role">Especialista en Ortodoncia Invisible</span>
+            <span class="team-col">Certificación Invisalign · Colegiado nº 28004567</span>
+            <p class="team-bio">
+              Si tus dientes parecen un laberinto, él disfruta encontrando la ruta milimétrica para alinearlos en tiempo récord.
+            </p>
+          </article>
+
+          <!-- María Pérez -->
+          <article class="team-card">
+            <div class="team-photo-wrapper">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="María Pérez, Higienista Bucodental" loading="lazy">
+              <div class="team-badge-quirk">🗣️ Muy conversadora y experta en calmar nervios</div>
+            </div>
+            <h3 class="team-name">María Pérez</h3>
+            <span class="team-role">Higienista Bucodental Senior</span>
+            <span class="team-col">8 años en el equipo de Chamberí</span>
+            <p class="team-bio">
+              Te enseñará trucos para usar el hilo dental sin que sientas que te están echando una bronca paternal.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BLOQUE 8: TESTIMONIOS (VOZ COLOQUIAL ESPAÑOLA)
+         ========================================================= -->
+    <section class="section container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 2.5rem auto;">
+        <span class="text-hand">Opiniones espontáneas</span>
+        <h2>Lo que dicen quienes ya han pasado por aquí</h2>
+        <p class="text-muted">Reseñas de Google verificadas de vecinos de Madrid que venían con miedo y ahora vuelven tranquilos.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card">
+          <p class="testimonial-quote">
+            «Me daba pánico físico ir al dentista por una mala experiencia de crío. Aquí la Dra. Lucía me puso sedación para dos implantes y la verdad es que ni me enteré. Me desperté y ya estaba hecho. Ahora hasta voy contento a las revisiones anuales.»
+          </p>
+          <footer class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Carlos M., paciente de implantes" class="author-avatar" loading="lazy">
+            <div>
+              <div class="author-name">Carlos M. (45 años)</div>
+              <div class="author-treatment">2 Implantes en premolares · Vecino de Arapiles</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <p class="testimonial-quote">
+            «La ortodoncia invisible me cambió la vida para el curro. Nadie en la oficina notaba que llevaba los alineadores puestos y en apenas 9 meses el Dr. Andrés me dejó la sonrisa clavada. Trato de diez de María en cada limpieza.»
+          </p>
+          <footer class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Ana R., paciente de ortodoncia invisible" class="author-avatar" loading="lazy">
+            <div>
+              <div class="author-name">Ana R. (32 años)</div>
+              <div class="author-treatment">Invisalign · Calle Santa Engracia</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <p class="testimonial-quote">
+            «El presupuesto del Dr. Javier fue exactamente lo que pagué, ni un euro más ni historias raras de última hora. Se agradece encontrar profesionales tan honestos en pleno centro de Madrid.»
+          </p>
+          <footer class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Luis G., paciente de carillas estéticas" class="author-avatar" loading="lazy">
+            <div>
+              <div class="author-name">Luis G. (58 años)</div>
+              <div class="author-treatment">Rehabilitación con carillas · Calle Fuencarral</div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BLOQUE 9: PREGUNTAS FRECUENTES (FAQ ACORDEÓN)
+         ========================================================= -->
+    <section class="section section--tint">
+      <div class="container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 2.5rem auto;">
+          <span class="text-hand">Dudas típicas resueltas</span>
+          <h2>Preguntas frecuentes (con respuestas sin rodeos)</h2>
+          <p class="text-muted">Si te queda alguna duda en el tintero, llámanos o pregúntanos por WhatsApp sin compromiso.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-button" aria-expanded="false">
+              <span>¿Duele ponerse un implante dental?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Con la anestesia local y nuestra opción de sedación consciente, durante la intervención <strong>no vas a sentir dolor alguno</strong>. Después de la cirugía es normal notar una ligera tirantez o molestia similar a cuando te sacan una muela; con un analgésico convencional (tipo paracetamol o ibuprofeno) se pasa en 24-48 horas.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-button" aria-expanded="false">
+              <span>¿Cuánto dura realmente un implante de titanio?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Si mantienes una higiene bucal adecuada y acudes a tu revisión y limpieza anual, <strong>te durará toda la vida</strong>. Nosotros trabajamos exclusivamente con titanio de primera marca y te entregamos la garantía por escrito el mismo día de la colocación.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-button" aria-expanded="false">
+              <span>¿La ortodoncia invisible funciona igual de bien que los brackets?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Rotundamente sí para el 95% de los casos. Además tiene dos ventajas enormes: no tienes llagas por alambres y te los quitas para comer palomitas o lavarte los dientes a fondo sin impedimentos.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-button" aria-expanded="false">
+              <span>¿Cuánto cuesta una carilla de porcelana?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Parten desde 450 € por diente según el material (feldespato o disilicato de litio) y la complejidad del caso. En la primera visita valoramos tu oclusión y te damos el presupuesto cerrado sin compromiso.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-button" aria-expanded="false">
+              <span>¿Ofrecéis opciones de financiación para tratamientos grandes?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sí. Disponemos de financiación directa de hasta <strong>24 meses sin intereses (0% TAE)</strong> con solo presentar tu DNI y última nómina. Si necesitas plazos más amplios (hasta 60 meses), lo gestionamos en 15 minutos en recepción.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-button" aria-expanded="false">
+              <span>¿La primera consulta y el diagnóstico tienen coste?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No, la primera visita de exploración clínica y valoración con el Dr. Javier Morales o la Dra. Lucía es <strong>100% gratuita</strong>. Te explicamos lo que vemos, te damos opciones y decides con total libertad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BLOQUE 10: INSTALACIONES Y TECNOLOGÍA (FOTOS "CASERAS")
+         ========================================================= -->
+    <section class="section container">
+      <div style="max-width: 650px;">
+        <span class="text-hand">Nuestra casa en Fuencarral 123</span>
+        <h2>Instalaciones cómodas y tecnología que ahorra molestias</h2>
+        <p class="text-muted">No tenemos sillones espaciales de diseño futurista, pero sí tecnología punta para que no sufras con pastas en la boca ni radiaciones innecesarias.</p>
+      </div>
+
+      <div class="clinic-photos-grid">
+        <div class="clinic-photo-card">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80" alt="Sala de espera de la clínica con café y luz natural" loading="lazy">
+          <p class="clinic-photo-caption">«Nuestra sala de espera con café recién molido.»</p>
+        </div>
+
+        <div class="clinic-photo-card">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Gabinete dental luminoso con escáner 3D" loading="lazy">
+          <p class="clinic-photo-caption">«Gabinete 1: luz natural y cero ruidos estridentes.»</p>
+        </div>
+
+        <div class="clinic-photo-card">
+          <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=600&q=80" alt="Escáner intraoral 3D de alta precisión" loading="lazy">
+          <p class="clinic-photo-caption">«Escáner 3D: adiós a las pastas de impresión que dan náuseas.»</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BLOQUE 11: MAPA Y UBICACIÓN EN CHAMBERÍ
+         ========================================================= -->
+    <section class="section--tint" style="padding: 3rem 0;">
+      <div class="container grid-asymmetric-reverse">
+        <div>
+          <span class="text-hand">Muy fácil de llegar</span>
+          <h2>En el corazón de Chamberí</h2>
+          <p style="margin-bottom: 1rem;">
+            <strong>📍 Calle de Fuencarral 123, 1º Dcha, 28010 Madrid</strong>
+          </p>
+          <ul style="list-style: none; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.95rem;">
+            <li>🚇 <strong>Metro:</strong> A 2 minutos a pie de Metro Quevedo (L2) y Metro Bilbao (L1 y L4).</li>
+            <li>🚌 <strong>Autobuses EMT:</strong> Líneas 3, 37, 147 y 149 a la puerta.</li>
+            <li>🚗 <strong>Parking:</strong> Parking público en Calle Fuencarral 115 (te sellamos 1 hora gratuita de estacionamiento).</li>
+          </ul>
+          <div style="background: var(--color-surface); padding: 1rem; border: 1.5px solid var(--color-ink); border-radius: 10px; font-size: 0.9rem;">
+            ⏰ <strong>Horario ininterrumpido:</strong> Lunes a Viernes de 9:00 a 20:00 · Sábados de 10:00 a 14:00.
+          </div>
+        </div>
+
+        <!-- Representación de mapa limpia y accesible -->
+        <div style="border: 2px solid var(--color-ink); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-hard-md); height: 320px; background: #E8ECE5; position: relative;">
+          <iframe 
+            title="Ubicación de Dentista Morales en Google Maps Chamberí"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.8778007693994!2d-3.7052!3d40.4312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e00000001%3A0x0!2sCalle+de+Fuencarral%2C+123%2C+28010+Madrid!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BLOQUE 12: FORMULARIO FINAL + CTA DESTACADO
+         ========================================================= -->
+    <section id="pedir-cita" class="section container">
+      <div class="contact-card-box grid-asymmetric-2" style="background-color: #FAF4EB;">
+        <div>
+          <span class="text-hand">¿Hablamos de tu caso?</span>
+          <h2>¿Listo para dejar de posponer tu visita al dentista?</h2>
+          <p class="text-lead" style="margin-bottom: 1.5rem;">
+            Reserva tu primera valoración gratuita. Te explicaremos el estado de tu boca sin tecnicismos raros, te daremos un presupuesto cerrado y, si te apetece, te dejamos un buen café de bienvenida.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <a href="tel:910123456" class="btn btn-outline" style="justify-content: flex-start;">
+              <span>📞 Llamar al 910 123 456</span>
+            </a>
+            <a href="https://wa.me/34612345678" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="justify-content: flex-start;">
+              <span>💬 Escribir un WhatsApp (+34 612 345 678)</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <form class="js-lead-form" style="background: var(--color-surface); padding: 1.75rem; border: 2px solid var(--color-ink); border-radius: 14px; box-shadow: var(--shadow-hard-md);">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Pide tu cita sin compromiso</h3>
+            
+            <div class="form-group">
+              <label for="form-final-name" class="form-label">Nombre y apellidos *</label>
+              <input type="text" id="form-final-name" name="nombre" class="form-input" placeholder="Ej. Carmen Navarro" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-final-phone" class="form-label">Teléfono móvil *</label>
+              <input type="tel" id="form-final-phone" name="telefono" class="form-input" placeholder="Ej. 612 345 678" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-final-email" class="form-label">Email (opcional)</label>
+              <input type="email" id="form-final-email" name="email" class="form-input" placeholder="tu@correo.com">
+            </div>
+
+            <div class="form-group">
+              <label for="form-final-treatment" class="form-label">¿En qué te podemos ayudar?</label>
+              <select id="form-final-treatment" name="tratamiento" class="form-select">
+                <option value="implantes">Implantes Dentales</option>
+                <option value="ortodoncia">Ortodoncia Invisible</option>
+                <option value="estetica">Carillas / Estética Dental</option>
+                <option value="periodoncia">Problemas de encías</option>
+                <option value="revision">Primera revisión y limpieza</option>
+                <option value="urgencia">Dolor agudo / Urgencia</option>
+              </select>
+            </div>
+
+            <!-- Checkboxes RGPD granulares y transparentes -->
+            <div class="rgpd-checkbox-group">
+              <div class="rgpd-item">
+                <input type="checkbox" id="rgpd-consent-1" name="rgpd_consent" required>
+                <label for="rgpd-consent-1">
+                  <strong>Acepto la política de privacidad</strong> para que el equipo de Dentista Morales contacte conmigo y gestione mi cita previa.
+                </label>
+              </div>
+              <div class="rgpd-item">
+                <input type="checkbox" id="rgpd-consent-2" name="rgpd_promo">
+                <label for="rgpd-consent-2">
+                  (Opcional) Deseo recibir recordatorios de salud dental y revisiones anuales por WhatsApp o email.
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-terracotta btn-block">
+              Confirmar solicitud de valoración gratuita
+            </button>
+            <span class="btn-microcopy">Te responderemos en menos de 2 horas hábiles.</span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       BLOQUE 13: FOOTER COMPLETO CON PERSONALIDAD Y RGPD
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-title" style="display: flex; align-items: center; gap: 0.5rem;">
+            <span>🦷</span> Dentista Morales
+          </h3>
+          <p style="font-size: 0.92rem; color: #C5D4CB; margin-bottom: 1rem;">
+            Clínica dental privada en Chamberí, Madrid. Odontología honesta, diagnósticos claros y sin sorpresas en la factura.
+          </p>
+          <div style="font-size: 0.85rem; color: #A3B5AA;">
+            <p>🏛️ <strong>Registro Sanitario:</strong> NICA 12345</p>
+            <p>👨‍⚕️ <strong>Director Médico:</strong> Dr. Javier Morales (Col. 28001234 COEM)</p>
+          </div>
+          <!-- Frase dinámica del footer -->
+          <div class="footer-random-quote-box" id="footer-dynamic-quote">
+            « Hecho con café, paciencia y un poco de estrés en Chamberí. »
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Tratamientos</h4>
+          <ul class="footer-links-list">
+            <li><a href="implantes.html">Implantes Dentales</a></li>
+            <li><a href="invisalign.html">Ortodoncia Invisible (Invisalign 3D)</a></li>
+            <li><a href="#estetica">Carillas de Porcelana</a></li>
+            <li><a href="#estetica">Blanqueamiento Clínico</a></li>
+            <li><a href="#periodoncia">Periodoncia y Encías</a></li>
+            <li><a href="#sedacion">Sedación Consciente</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Conoce la clínica</h4>
+          <ul class="footer-links-list">
+            <li><a href="equipo.html">Nuestro Equipo Médico</a></li>
+            <li><a href="#casos">Casos Antes / Después</a></li>
+            <li><a href="contacto.html">Cómo llegar a Fuencarral 123</a></li>
+            <li><a href="contacto.html#urgencias">Atención de Urgencias</a></li>
+            <li><a href="404.html">Página de prueba 404</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contacto Directo</h4>
+          <p style="font-size: 0.92rem; margin-bottom: 0.4rem;">📍 C/ Fuencarral 123, 28010 Madrid</p>
+          <p style="font-size: 0.92rem; margin-bottom: 0.4rem;">📞 <a href="tel:910123456" style="color: var(--color-mustard);">910 123 456</a></p>
+          <p style="font-size: 0.92rem; margin-bottom: 0.4rem;">💬 <a href="https://wa.me/34612345678" style="color: #5CD47A;">+34 612 345 678 (WhatsApp)</a></p>
+          <p style="font-size: 0.92rem; margin-bottom: 1rem;">✉️ <a href="mailto:hola@dentistamorales.es">hola@dentistamorales.es</a></p>
+
+          <h4 class="footer-title" style="font-size: 1rem; margin-top: 1rem;">Redes Sociales</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">📸 Instagram de la clínica (fotos reales)</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener">👥 Facebook (sí, todavía lo usamos)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2025 Dentista Morales S.L.P. Todos los derechos reservados.
+        </div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#">Aviso Legal</a>
+          <a href="#">Política de Privacidad RGPD</a>
+          <a href="#">Política de Cookies</a>
+          <a href="#">Código Deontológico Sanitario</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

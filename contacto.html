@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto y Cita Previa | Dentista Morales Chamberí, Madrid</title>
+  <meta name="description" content="Pide cita o consúltanos tus dudas. Estamos en Calle Fuencarral 123, Madrid. Teléfono 910 123 456 y WhatsApp 612 345 678. Primera valoración y diagnóstico sin coste.">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="site-topbar">
+    <div class="container topbar-content">
+      <div class="topbar-links">
+        <a href="tel:910123456" class="topbar-link"><span>📞</span> <strong>910 123 456</strong></a>
+        <a href="https://wa.me/34612345678" target="_blank" rel="noopener noreferrer" class="topbar-link"><span>💬</span> WhatsApp: <strong>612 345 678</strong></a>
+      </div>
+      <div class="topbar-links">
+        <div id="clinic-status-pill" class="status-pill">
+          <span class="status-dot"></span> <span>Abierto hoy</span>
+        </div>
+        <a href="#urgencias" class="topbar-link" style="color: var(--color-mustard);">🚨 Urgencias del día</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <svg class="logo-doodle-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 10C7 16 7 26 12 34C14 37 16 38 18 30C19 25 21 24 22 24C23 24 25 25 26 30C28 38 30 37 32 34C37 26 37 16 32 10C27 4 17 4 12 10Z" stroke="#203B31" stroke-width="3" stroke-linecap="round" fill="#FFFDF9"/>
+          <circle cx="17" cy="15" r="1.5" fill="#C85A32"/>
+          <circle cx="27" cy="15" r="1.5" fill="#C85A32"/>
+          <path d="M18 20C20 22 24 22 26 20" stroke="#C85A32" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <span>Dentista Morales</span>
+          <span class="brand-subtext">Chamberí · Desde 2005</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="implantes.html" class="nav-link">Implantes</a></li>
+          <li><a href="invisalign.html" class="nav-link">Invisalign 3D</a></li>
+          <li><a href="equipo.html" class="nav-link">Equipo Médico</a></li>
+          <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+        </ul>
+        <a href="tel:910123456" class="btn btn-terracotta btn-sm">📞 910 123 456</a>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- CABECERA CONTACTO -->
+    <section class="section container" style="padding-bottom: 2rem;">
+      <div style="max-width: 750px;">
+        <span class="text-hand">Estamos aquí al lado</span>
+        <h1>Hablemos (o escribámonos, como prefieras)</h1>
+        <p class="text-lead">
+          Pide cita, pregúntanos precios orientativos, o simplemente cuéntanos tu fobia al dentista para que sepamos cómo tratarte con cariño desde el primer minuto. Te escuchamos sin juzgarte ni meterte prisas.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORMULARIO PRINCIPAL & DATOS DIRECTOS -->
+    <section class="section--tint" style="padding: 3.5rem 0;">
+      <div class="container grid-asymmetric-2">
+        <!-- Formulario RGPD completo -->
+        <div class="contact-card-box">
+          <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Formulario de cita previa / consulta</h2>
+          <p class="text-muted" style="margin-bottom: 1.5rem;">Te responderemos en menos de 2 horas en horario laboral.</p>
+
+          <form class="js-lead-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Nombre y apellidos *</label>
+              <input type="text" id="contact-name" name="nombre" class="form-input" placeholder="Tu nombre" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Teléfono móvil *</label>
+                <input type="tel" id="contact-phone" name="telefono" class="form-input" placeholder="Ej. 612 345 678" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Correo electrónico</label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="tu@correo.com">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-treatment" class="form-label">Tratamiento o motivo de la visita</label>
+              <select id="contact-treatment" name="tratamiento" class="form-select">
+                <option value="revision">Primera revisión general gratuita + diagnóstico</option>
+                <option value="implantes">Implantes Dentales / Falta de pieza</option>
+                <option value="ortodoncia">Ortodoncia Invisible (Invisalign)</option>
+                <option value="estetica">Carillas / Estética Dental</option>
+                <option value="periodoncia">Sangrado de encías / Periodoncia</option>
+                <option value="dolor">Dolor o urgencia</option>
+                <option value="otro">Otra consulta</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-msg" class="form-label">Cuéntanos un poco más (opcional)</label>
+              <textarea id="contact-msg" name="mensaje" class="form-textarea" rows="4" placeholder="¿Tienes alguna preferencia de horario? ¿Tienes miedo al dentista? Cuéntanos lo que quieras..."></textarea>
+            </div>
+
+            <!-- Checkboxes RGPD normativos españoles -->
+            <div class="rgpd-checkbox-group">
+              <div class="rgpd-item">
+                <input type="checkbox" id="rgpd-legal-1" name="rgpd_consent" required>
+                <label for="rgpd-legal-1">
+                  <strong>Acepto la Política de Privacidad (RGPD) *</strong>. Autorizo a Dentista Morales S.L.P. a tratar mis datos exclusivamente para tramitar mi cita y comunicarme el diagnóstico clínico.
+                </label>
+              </div>
+              <div class="rgpd-item">
+                <input type="checkbox" id="rgpd-legal-2" name="rgpd_news">
+                <label for="rgpd-legal-2">
+                  Acepto recibir comunicaciones de salud dental periódicas o recordatorios de revisión semestral.
+                </label>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--color-muted); margin-top: 0.75rem;">
+                <strong>Responsable:</strong> Dentista Morales S.L.P. | <strong>Finalidad:</strong> Gestión de citas y atención sanitaria | <strong>Legitimación:</strong> Consentimiento del interesado | <strong>Derechos:</strong> Acceso, rectificación, supresión en hola@dentistamorales.es.
+              </p>
+            </div>
+
+            <button type="submit" class="btn btn-terracotta btn-block">
+              Enviar solicitud de cita previa
+            </button>
+          </form>
+        </div>
+
+        <!-- Canales Directos e Información de la Clínica -->
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <!-- Tarjeta de contacto directo -->
+          <div style="background: var(--color-surface); border: 2px solid var(--color-ink); border-radius: var(--radius-rough-2); padding: 1.75rem; box-shadow: var(--shadow-hard-md);">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">Vías de contacto directo</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <a href="tel:910123456" class="btn btn-outline" style="justify-content: flex-start; gap: 0.75rem;">
+                <span style="font-size: 1.3rem;">📞</span>
+                <div style="text-align: left;">
+                  <div style="font-size: 0.8rem; color: var(--color-muted);">Llámanos por teléfono</div>
+                  <strong>910 123 456</strong>
+                </div>
+              </a>
+
+              <a href="https://wa.me/34612345678" target="_blank" rel="noopener" class="btn btn-outline" style="justify-content: flex-start; gap: 0.75rem;">
+                <span style="font-size: 1.3rem;">💬</span>
+                <div style="text-align: left;">
+                  <div style="font-size: 0.8rem; color: var(--color-muted);">Escríbenos al WhatsApp</div>
+                  <strong>+34 612 345 678</strong>
+                </div>
+              </a>
+
+              <a href="mailto:hola@dentistamorales.es" class="btn btn-outline" style="justify-content: flex-start; gap: 0.75rem;">
+                <span style="font-size: 1.3rem;">✉️</span>
+                <div style="text-align: left;">
+                  <div style="font-size: 0.8rem; color: var(--color-muted);">Escríbenos por email</div>
+                  <strong>hola@dentistamorales.es</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Horario y Dirección -->
+          <div style="background: var(--color-surface); border: 2px solid var(--color-ink); border-radius: var(--radius-rough-1); padding: 1.75rem; box-shadow: var(--shadow-hard-md);">
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.75rem;">📍 Dónde encontrarnos</h3>
+            <p style="margin-bottom: 0.5rem;"><strong>Calle de Fuencarral 123, 1º Dcha</strong></p>
+            <p style="color: var(--color-muted); font-size: 0.92rem; margin-bottom: 1rem;">28010 Madrid (Barrio de Chamberí)</p>
+
+            <h4 style="font-size: 1rem; margin-bottom: 0.35rem;">⏰ Horarios de atención:</h4>
+            <p style="font-size: 0.9rem; color: #383431;"><strong>Lunes a Viernes:</strong> 9:00 - 20:00 (Ininterrumpido)</p>
+            <p style="font-size: 0.9rem; color: #383431;"><strong>Sábados:</strong> 10:00 - 14:00</p>
+            <p style="font-size: 0.9rem; color: var(--color-muted);">Domingos y festivos: Cerrado (Urgencias activas)</p>
+          </div>
+
+          <!-- Bloque Urgencias -->
+          <div id="urgencias" style="background: #FFF4E5; border: 2px dashed var(--color-terracotta); border-radius: 12px; padding: 1.25rem;">
+            <h3 style="font-size: 1.15rem; color: var(--color-terracotta); margin-bottom: 0.4rem;">🚨 ¿Tienes dolor agudo o una urgencia?</h3>
+            <p style="font-size: 0.9rem; color: #4A3525; margin-bottom: 0.75rem;">
+              Si se te ha roto un diente, te duele intensamente o se te ha caído una corona, no pidas cita por formulario: <strong>llámanos al 910 123 456 o manda un WhatsApp con la palabra "URGENCIA"</strong> para hacerte hueco hoy mismo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPA DETALLADO -->
+    <section class="section container">
+      <div style="border: 2.5px solid var(--color-ink); border-radius: 16px; overflow: hidden; height: 380px; box-shadow: var(--shadow-hard-lg);">
+        <iframe 
+          title="Mapa de localización Dentista Morales Chamberí"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.8778007693994!2d-3.7052!3d40.4312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e00000001%3A0x0!2sCalle+de+Fuencarral%2C+123%2C+28010+Madrid!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-title">🦷 Dentista Morales</h3>
+          <p style="font-size: 0.92rem; color: #C5D4CB;">C/ Fuencarral 123, 28010 Madrid</p>
+          <p style="font-size: 0.85rem; color: #A3B5AA;">Registro Sanitario NICA 12345</p>
+          <div class="footer-random-quote-box" id="footer-dynamic-quote">
+            « Hecho con café, paciencia y un poco de estrés en Chamberí. »
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Tratamientos</h4>
+          <ul class="footer-links-list">
+            <li><a href="implantes.html">Implantes Dentales</a></li>
+            <li><a href="invisalign.html">Invisalign (Ortodoncia 3D)</a></li>
+            <li><a href="index.html#estetica">Carillas de Porcelana</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Navegación</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="equipo.html">Equipo Médico</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contacto</h4>
+          <p>📞 <a href="tel:910123456" style="color: var(--color-mustard);">910 123 456</a></p>
+          <p>💬 <a href="https://wa.me/34612345678" style="color: #5CD47A;">WhatsApp 612 345 678</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div>© 2025 Dentista Morales S.L.P.</div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="#">Aviso Legal</a>
+          <a href="#">Privacidad RGPD</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

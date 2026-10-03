@@ -1,0 +1,357 @@
+/* ==========================================================================
+   INVISALIGN 3D SCROLL STORYTELLING - ESTILOS OPTIMIZADOS
+   Clínica Dental Dr. Morales & Asociados · Ciudad de México (CDMX)
+   Paleta: Azul marino #0e3b64 | Azul clínico #1976d2 | Verde menta #0d9488 | Verde conversión #15803d
+   Enfoque: Cero jank, aceleración por hardware (GPU), contraste AAA y compositing limpio
+   ========================================================================== */
+
+:root {
+  --inv-navy: #0e3b64;
+  --inv-navy-dark: #081e35;
+  --inv-navy-deep: #051424;
+  --inv-blue: #1976d2;
+  --inv-blue-light: #60a5fa;
+  --inv-mint: #0d9488;
+  --inv-mint-light: #5eead4;
+  --inv-green: #15803d;
+  --inv-green-hover: #166534;
+  --inv-surface: #ffffff;
+  --inv-text-light: #f8fafc;
+  --inv-text-muted: #94a3b8;
+  --inv-border: rgba(13, 148, 136, 0.25);
+  --inv-card-bg: rgba(8, 30, 53, 0.92);
+}
+
+/* ---------------------------------------------------------
+   1. SECCIÓN PRINCIPAL DE SCROLL STORYTELLING
+   --------------------------------------------------------- */
+.invisalign-story-section {
+  position: relative;
+  width: 100%;
+  background: radial-gradient(circle at 50% 30%, #0e3b64 0%, #081e35 60%, #051424 100%);
+  color: var(--inv-text-light);
+  overflow: visible;
+  /* Contención CSS para evitar repaints en el resto del DOM */
+  contain: layout paint;
+}
+
+.story-sticky-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------------------------------------------------------
+   2. CONTENEDOR DEL CANVAS WEBGL
+   --------------------------------------------------------- */
+.canvas-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none; /* Permite scroll nativo sin intercepción táctil */
+}
+
+#invisalign-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Regla de rendimiento: Sin backdrop-filter ni mix-blend-mode sobre el canvas */
+  transform: translateZ(0);
+}
+
+#invisalign-canvas.is-ready {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------
+   3. POSTER ESTÁTICO & INDICADOR DE PROGRESO DE CARGA
+   --------------------------------------------------------- */
+.invisalign-poster {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 40%, rgba(14, 59, 100, 0.95), #081e35);
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  pointer-events: auto;
+}
+
+.invisalign-poster.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.poster-graphic {
+  text-align: center;
+  max-width: 320px;
+  padding: 1.5rem;
+}
+
+.poster-svg-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.25rem auto;
+  color: var(--inv-mint-light);
+  filter: drop-shadow(0 4px 12px rgba(13, 148, 136, 0.4));
+  animation: pulseTooth 2s ease-in-out infinite;
+}
+
+@keyframes pulseTooth {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+.poster-loader-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 1rem;
+  border: 1px solid rgba(13, 148, 136, 0.3);
+}
+
+.poster-loader-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--inv-blue), var(--inv-mint-light));
+  border-radius: 999px;
+  transition: width 0.15s ease-out;
+}
+
+.poster-text {
+  font-size: 0.85rem;
+  color: var(--inv-text-muted);
+  margin-top: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------------------------------------------
+   4. TARJETAS DE STORYTELLING (HTML SOBRE EL CANVAS)
+   --------------------------------------------------------- */
+.story-steps-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 clamp(1.5rem, 6vw, 6rem);
+}
+
+.story-card {
+  position: absolute;
+  max-width: 440px;
+  background: var(--inv-card-bg);
+  border: 1px solid var(--inv-border);
+  border-radius: 16px;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  opacity: 0;
+  /* Regla de rendimiento: animar únicamente transform y opacity */
+  transform: translate3d(0, 30px, 0);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+.story-card.is-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+}
+
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--inv-mint-light);
+  background: rgba(13, 148, 136, 0.15);
+  border: 1px solid rgba(94, 234, 212, 0.3);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.85rem;
+}
+
+.step-title {
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  color: #ffffff;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.015em;
+}
+
+.step-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 0;
+}
+
+.step-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+/* ---------------------------------------------------------
+   5. BOTONES Y LLAMADAS A LA ACCIÓN (CRO & CONVERSIÓN)
+   --------------------------------------------------------- */
+.btn-conversion {
+  background-color: var(--inv-green);
+  color: #ffffff !important;
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(21, 128, 61, 0.4);
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-conversion:hover {
+  background-color: var(--inv-green-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(21, 128, 61, 0.55);
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+/* ---------------------------------------------------------
+   6. INDICADOR DE PROGRESO LATERAL (DOTS)
+   --------------------------------------------------------- */
+.story-dots-indicator {
+  position: absolute;
+  right: clamp(1rem, 3vw, 2.5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.story-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.story-dot.is-active {
+  background: var(--inv-mint-light);
+  border-color: var(--inv-mint-light);
+  transform: scale(1.4);
+  box-shadow: 0 0 10px rgba(94, 234, 212, 0.7);
+}
+
+/* ---------------------------------------------------------
+   7. FALLBACK ESTÁTICO (PREFERS-REDUCED-MOTION / FLAG DESACTIVADO)
+   --------------------------------------------------------- */
+.static-story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 0;
+}
+
+.static-card {
+  background: var(--inv-card-bg);
+  border: 1px solid var(--inv-border);
+  border-radius: 14px;
+  padding: 1.75rem;
+  color: var(--inv-text-light);
+}
+
+/* ---------------------------------------------------------
+   8. RESPONSIVE Y RENDIMIENTO MÓVIL
+   --------------------------------------------------------- */
+@media (max-width: 900px) {
+  .story-steps-container {
+    padding: 1rem;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 2.5rem;
+  }
+
+  .story-card {
+    max-width: 94%;
+    padding: 1.25rem 1.5rem;
+    border-radius: 14px;
+    background: rgba(8, 30, 53, 0.94);
+  }
+
+  .step-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .step-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .story-dots-indicator {
+    right: 0.75rem;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-conversion, .btn-outline-light {
+    width: 100%;
+  }
+}

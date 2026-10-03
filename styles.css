@@ -1,0 +1,1504 @@
+/* ==========================================================================
+   DENTISTA MORALES - CSS ARTISANAL & ANTI-AI DESIGN SYSTEM
+   Enfoque: Calidez humana, asimetría controlada, texturas orgánicas y cero estética corporativa robótica.
+   ========================================================================== */
+
+/* ---------------------------------------------------------
+   1. VARIABLES DE DISEÑO & PALETA ORGÁNICA (Tierra, Oliva, Terracota)
+   --------------------------------------------------------- */
+:root {
+  /* Tipografías con carácter editorial y legibilidad moderna */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-hand: 'Caveat', cursive, sans-serif;
+
+  /* Paleta cromática cálida (lejos de los azules neón de IA) */
+  --color-bg: #FAF7F2;          /* Crema avena claro de fondo */
+  --color-surface: #FFFDF9;     /* Blanco cálido para tarjetas */
+  --color-surface-tint: #F3ECE1;/* Arena suave para fondos secundarios */
+  --color-forest: #203B31;      /* Verde bosque profundo (seriedad clínica cercana) */
+  --color-forest-light: #2D4F43;
+  --color-terracotta: #C85A32;  /* Terracota cálido para CTAs principales */
+  --color-terracotta-hover: #B04B26;
+  --color-mustard: #E5A93C;     /* Mostaza tostado para acentos y pegatinas */
+  --color-olive: #5B6838;       /* Verde oliva para detalles botánicos */
+  --color-ink: #242220;         /* Tinta casi negra, sin ser negro puro digital */
+  --color-muted: #6B665F;       /* Gris cálido para microcopys y subtítulos */
+  --color-border: #E2D9CC;      /* Borde suave tipo papel */
+  --color-tape: rgba(235, 222, 195, 0.75); /* Efecto cinta carrocero / washi */
+  --color-danger: #BD3A2B;
+  --color-success: #2E7D4F;
+
+  /* Sombras duras e imperfectas (anti-glassmorphism) */
+  --shadow-hard-sm: 2px 2px 0px var(--color-ink);
+  --shadow-hard-md: 4px 4px 0px var(--color-ink);
+  --shadow-hard-lg: 6px 6px 0px var(--color-ink);
+  --shadow-warm-soft: 0 10px 25px -5px rgba(36, 34, 32, 0.06), 0 8px 10px -6px rgba(36, 34, 32, 0.04);
+
+  /* Curvas de transición con rebote orgánico */
+  --ease-squish: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Radios de borde intencionadamente asimétricos */
+  --radius-rough-1: 14px 28px 18px 24px;
+  --radius-rough-2: 24px 12px 28px 16px;
+  --radius-rough-3: 8px 20px 10px 26px;
+  --radius-pill: 999px;
+  --radius-card: 16px;
+
+  /* Espaciados */
+  --container-max: 1200px;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+}
+
+/* ---------------------------------------------------------
+   2. RESET & BASE STYLES
+   --------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  line-height: 1.65;
+  font-size: 1.05rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Textura sutil de ruido de fondo analógico mediante SVG integrado */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Selección de texto con personalidad */
+::selection {
+  background-color: var(--color-mustard);
+  color: var(--color-ink);
+}
+
+img, svg, picture {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* ---------------------------------------------------------
+   3. TIPOGRAFÍA & ELEMENTOS EDITORIALES
+   --------------------------------------------------------- */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  color: var(--color-forest);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-variation-settings: 'WONK' 1, 'opsz' 72;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.8vw, 2.6rem);
+  margin-bottom: var(--space-sm);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.text-lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #383431;
+}
+
+.text-hand {
+  font-family: var(--font-hand);
+  font-size: 1.45rem;
+  color: var(--color-terracotta);
+  line-height: 1;
+}
+
+.text-muted {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+}
+
+.underline-sketch {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.underline-sketch::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  bottom: 2px;
+  width: 106%;
+  height: 9px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 12' preserveAspectRatio='none'%3E%3Cpath d='M3 9C45 3 115 2 157 8' stroke='%23E5A93C' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E") no-repeat center/100% 100%;
+  z-index: -1;
+}
+
+/* ---------------------------------------------------------
+   4. LAYOUT & CONTENEDORES ASIMÉTRICOS
+   --------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 4vw, 2.5rem);
+  padding-right: clamp(1rem, 4vw, 2.5rem);
+}
+
+.section {
+  padding-top: clamp(3.5rem, 7vw, 6.5rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  position: relative;
+}
+
+.section--tint {
+  background-color: var(--color-surface-tint);
+  border-top: 1px dashed var(--color-border);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.section--forest {
+  background-color: var(--color-forest);
+  color: var(--color-bg);
+}
+
+.section--forest h2, .section--forest h3 {
+  color: #FFFDF9;
+}
+
+.section--forest .text-muted {
+  color: #C0CBBF;
+}
+
+/* Rejillas rotas / asimétricas */
+.grid-asymmetric-2 {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.grid-asymmetric-reverse {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .grid-asymmetric-2,
+  .grid-asymmetric-reverse {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------------------
+   5. BOTONES Y COMPONENTES CON INTERACCIÓN "SQUISHY"
+   --------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  border: 2px solid var(--color-ink);
+  transition: transform 0.18s var(--ease-squish), box-shadow 0.18s ease, background-color 0.2s ease;
+  position: relative;
+  text-align: center;
+  box-shadow: var(--shadow-hard-md);
+  user-select: none;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--color-ink);
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--color-ink);
+}
+
+.btn-terracotta {
+  background-color: var(--color-terracotta);
+  color: #FFFFFF;
+  border-color: var(--color-ink);
+}
+.btn-terracotta:hover {
+  background-color: var(--color-terracotta-hover);
+}
+
+.btn-mustard {
+  background-color: var(--color-mustard);
+  color: var(--color-ink);
+}
+
+.btn-forest {
+  background-color: var(--color-forest);
+  color: #FFFFFF;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-ink);
+  box-shadow: 3px 3px 0px var(--color-ink);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-surface);
+}
+
+.btn-sm {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-hard-sm);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Microcopy bajo botones */
+.btn-microcopy {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------
+   6. HEADER & TOPBAR (HUMANO Y FIJO)
+   --------------------------------------------------------- */
+.site-topbar {
+  background-color: var(--color-forest);
+  color: #E2EADF;
+  font-size: 0.88rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.topbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.topbar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.topbar-link:hover {
+  color: var(--color-mustard);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(255,255,255,0.12);
+  padding: 0.15rem 0.6rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #5CD47A;
+  box-shadow: 0 0 6px #5CD47A;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(250, 247, 242, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  border-bottom: 2px solid var(--color-ink);
+  transition: padding 0.2s ease;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 0;
+}
+
+/* Logo con diente dibujado a mano */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-doodle-svg {
+  width: 38px;
+  height: 38px;
+  transition: transform 0.3s var(--ease-squish);
+}
+
+.brand-logo:hover .logo-doodle-svg {
+  transform: rotate(-12deg) scale(1.1);
+}
+
+.brand-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.45rem;
+  color: var(--color-forest);
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-subtext {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-terracotta);
+  margin-top: 2px;
+}
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.nav-link:hover {
+  color: var(--color-terracotta);
+  background-color: var(--color-surface-tint);
+}
+
+.nav-link.active {
+  color: var(--color-forest);
+  text-decoration: underline wavy var(--color-mustard) 2px;
+}
+
+/* Menú dropdown artesanal */
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: 12px;
+  box-shadow: var(--shadow-hard-md);
+  min-width: 220px;
+  padding: 0.6rem 0;
+  display: none;
+  list-style: none;
+  z-index: 100;
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item a {
+  display: block;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.dropdown-item a:hover {
+  background-color: var(--color-surface-tint);
+  color: var(--color-terracotta);
+}
+
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid var(--color-ink);
+  padding: 0.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .nav-desktop {
+    display: none;
+  }
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-nav-active .nav-desktop {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-bg);
+    border-bottom: 2px solid var(--color-ink);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-hard-lg);
+  }
+  .mobile-nav-active .nav-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .mobile-nav-active .dropdown-menu {
+    position: static;
+    border: none;
+    box-shadow: none;
+    background: var(--color-surface-tint);
+    display: block;
+    margin-top: 0.4rem;
+  }
+}
+
+/* ---------------------------------------------------------
+   7. SECCIÓN HERO (CON VOZ HUMANA Y ASIMETRÍA)
+   --------------------------------------------------------- */
+.hero-section {
+  padding-top: clamp(2.5rem, 5vw, 4.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-surface-tint);
+  border: 1.5px solid var(--color-ink);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-forest);
+  margin-bottom: var(--space-sm);
+  transform: rotate(-1deg);
+  box-shadow: 2px 2px 0px var(--color-ink);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  margin-bottom: var(--space-sm);
+}
+
+.hero-trust-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.trust-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.trust-stars {
+  color: var(--color-mustard);
+  letter-spacing: 2px;
+}
+
+.trust-badge-text {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* Marco fotográfico imperfecto con cinta carrocero */
+.hero-media-wrapper {
+  position: relative;
+  padding: 1rem;
+}
+
+.photo-tape-card {
+  position: relative;
+  background: var(--color-surface);
+  padding: 12px 12px 24px 12px;
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-rough-1);
+  box-shadow: var(--shadow-hard-lg);
+  transform: rotate(1.8deg);
+  transition: transform 0.3s ease;
+}
+
+.photo-tape-card:hover {
+  transform: rotate(0deg) scale(1.01);
+}
+
+/* Cinta simulada en la esquina */
+.photo-tape-card::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 35%;
+  width: 90px;
+  height: 26px;
+  background-color: var(--color-tape);
+  transform: rotate(-3deg);
+  border-left: 2px dashed rgba(0,0,0,0.15);
+  border-right: 2px dashed rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.photo-frame {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--color-border);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  filter: saturate(0.95) contrast(1.02);
+}
+
+.photo-caption {
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  color: var(--color-forest);
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.1;
+}
+
+/* Formulario rápido en Hero (3 campos) */
+.hero-fast-form {
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-rough-3);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-hard-md);
+  margin-top: 1.75rem;
+}
+
+.fast-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr auto;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .fast-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-ink);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--color-terracotta);
+  box-shadow: 2px 2px 0px var(--color-terracotta);
+  background: #FFFFFF;
+}
+
+/* ---------------------------------------------------------
+   8. BLOQUE PEGATINAS / BADGES DE CONFIANZA ROTADAS
+   --------------------------------------------------------- */
+.stickers-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.sticker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border: 2px solid var(--color-ink);
+  font-weight: 700;
+  font-size: 0.92rem;
+  box-shadow: var(--shadow-hard-sm);
+  transition: transform 0.2s var(--ease-squish);
+  user-select: none;
+}
+
+.sticker-badge:hover {
+  transform: scale(1.08) rotate(0deg) !important;
+}
+
+.sticker-badge:nth-child(1) {
+  background-color: var(--color-surface);
+  transform: rotate(-2.5deg);
+  border-radius: 20px 8px 18px 10px;
+}
+
+.sticker-badge:nth-child(2) {
+  background-color: var(--color-mustard);
+  transform: rotate(2deg);
+  border-radius: 8px 22px 10px 18px;
+}
+
+.sticker-badge:nth-child(3) {
+  background-color: #E6EDDE;
+  transform: rotate(-1.8deg);
+  border-radius: 14px 14px 22px 6px;
+}
+
+.sticker-badge:nth-child(4) {
+  background-color: #F8D8CE;
+  transform: rotate(3deg);
+  border-radius: 10px 24px 8px 20px;
+}
+
+.sticker-badge:nth-child(5) {
+  background-color: var(--color-surface);
+  transform: rotate(-1.2deg);
+  border-radius: 18px 8px 20px 12px;
+}
+
+/* ---------------------------------------------------------
+   9. GRID ASIMÉTRICO DE TRATAMIENTOS
+   --------------------------------------------------------- */
+.treatment-grid-asym {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.treatment-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-hard-md);
+  transition: transform 0.25s var(--ease-squish), box-shadow 0.25s ease;
+  position: relative;
+}
+
+.treatment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 7px 7px 0px var(--color-ink);
+}
+
+/* Tarjeta 1 Grande (Implantes) */
+.treatment-card--featured {
+  grid-column: span 7;
+  border-radius: 20px 35px 22px 30px;
+  background-color: #FDF9F2;
+  border-width: 2.5px;
+}
+
+/* Tarjeta 2 (Ortodoncia) */
+.treatment-card--col-5 {
+  grid-column: span 5;
+  border-radius: 28px 16px 32px 14px;
+}
+
+/* Tarjetas medianas */
+.treatment-card--col-4 {
+  grid-column: span 4;
+  border-radius: 16px 26px 14px 30px;
+}
+
+@media (max-width: 900px) {
+  .treatment-card--featured,
+  .treatment-card--col-5,
+  .treatment-card--col-4 {
+    grid-column: span 12;
+  }
+}
+
+.treatment-badge-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-ink);
+  margin-bottom: 0.75rem;
+  background-color: var(--color-surface-tint);
+}
+
+.treatment-price {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  margin: 0.75rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.treatment-price small {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+/* ---------------------------------------------------------
+   10. GALERÍA ANTES/DESPUÉS CON TOQUE HUMANO
+   --------------------------------------------------------- */
+.cases-container {
+  margin-top: 2.5rem;
+}
+
+.case-card-wrapper {
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-rough-2);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-hard-md);
+  margin-bottom: 2rem;
+}
+
+.case-grid-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  position: relative;
+}
+
+@media (max-width: 650px) {
+  .case-grid-compare {
+    grid-template-columns: 1fr;
+  }
+}
+
+.case-image-box {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid var(--color-border);
+}
+
+.case-image-box img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.case-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  border-radius: 6px;
+  border: 1.5px solid var(--color-ink);
+}
+
+.case-label--before {
+  background-color: #F8D8CE;
+}
+
+.case-label--after {
+  background-color: #D9EAD3;
+}
+
+.case-details-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--color-border);
+  font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------------
+   11. SECCIÓN "POR QUÉ ELEGIRNOS" CON ICONOS GARABATEADOS
+   --------------------------------------------------------- */
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.reason-item {
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-rough-1);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-hard-sm);
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  transition: transform 0.2s ease;
+}
+
+.reason-item:hover {
+  transform: translateY(-3px) rotate(0.5deg);
+}
+
+.reason-doodle {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background: var(--color-surface-tint);
+  border: 1.5px solid var(--color-ink);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+/* ---------------------------------------------------------
+   12. EQUIPO MÉDICO (FOTOS IMPERFECTAS Y HUMANAS)
+   --------------------------------------------------------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.team-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-rough-2);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-hard-md);
+  transition: transform 0.25s var(--ease-squish);
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-photo-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid var(--color-ink);
+  margin-bottom: 1rem;
+}
+
+.team-photo-wrapper img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.team-badge-quirk {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background: rgba(255, 253, 249, 0.94);
+  border: 1px solid var(--color-ink);
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  color: var(--color-terracotta);
+  text-align: center;
+  line-height: 1.1;
+}
+
+.team-name {
+  font-size: 1.35rem;
+  margin-bottom: 0.2rem;
+}
+
+.team-role {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-forest);
+  margin-bottom: 0.25rem;
+}
+
+.team-col {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.team-bio {
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: #383431;
+}
+
+/* ---------------------------------------------------------
+   13. TESTIMONIOS (VOZ COLOQUIAL ESPAÑOLA)
+   --------------------------------------------------------- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.testimonial-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-rough-1);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-hard-md);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card::before {
+  content: "“";
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  color: var(--color-mustard);
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  line-height: 1;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.testimonial-quote {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 2;
+  font-style: normal;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.author-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-ink);
+  object-fit: cover;
+}
+
+.author-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.author-treatment {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+/* ---------------------------------------------------------
+   14. FAQ CON ACORDEÓN ARTESANAL
+   --------------------------------------------------------- */
+.faq-list {
+  max-width: 840px;
+  margin: 2.5rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: 14px;
+  box-shadow: var(--shadow-hard-sm);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.faq-button {
+  width: 100%;
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-forest);
+}
+
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 1.5px solid var(--color-ink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: var(--color-surface-tint);
+  transition: transform 0.25s var(--ease-squish);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  background-color: var(--color-mustard);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.faq-answer p {
+  padding-top: 1rem;
+  font-size: 0.98rem;
+  color: #383431;
+}
+
+/* ---------------------------------------------------------
+   15. INSTALACIONES Y DETALLES CASEROS
+   --------------------------------------------------------- */
+.clinic-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.clinic-photo-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: 12px;
+  padding: 10px 10px 16px 10px;
+  box-shadow: var(--shadow-hard-sm);
+}
+
+.clinic-photo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+}
+
+.clinic-photo-caption {
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  color: var(--color-forest);
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------
+   16. FORMULARIOS CON VALIDACIÓN Y RGPD RIGUROSO
+   --------------------------------------------------------- */
+.contact-card-box {
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-rough-1);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  box-shadow: var(--shadow-hard-lg);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin-bottom: 0.4rem;
+}
+
+.rgpd-checkbox-group {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--color-surface-tint);
+  border: 1.5px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.rgpd-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  color: #383431;
+}
+
+.rgpd-item:last-child {
+  margin-bottom: 0;
+}
+
+.rgpd-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-forest);
+  margin-top: 3px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------
+   17. TABLA COMPARATIVA "APUNTE A MANO" (Implantes)
+   --------------------------------------------------------- */
+.hand-table-wrapper {
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-rough-2);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-hard-md);
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.hand-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.hand-table th {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  padding: 0.9rem;
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.hand-table td {
+  padding: 0.9rem;
+  border-bottom: 1px dashed var(--color-border);
+  font-size: 0.98rem;
+}
+
+.hand-table tr:last-child td {
+  border-bottom: none;
+}
+
+.hand-table th:first-child, .hand-table td:first-child {
+  color: var(--color-forest);
+  font-weight: 600;
+}
+
+.hand-table th:last-child, .hand-table td:last-child {
+  color: #8C3A24;
+}
+
+/* ---------------------------------------------------------
+   18. TIMELINE PROCESO PASO A PASO
+   --------------------------------------------------------- */
+.timeline-list {
+  position: relative;
+  margin: 2.5rem 0;
+  padding-left: 2rem;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  background: repeating-linear-gradient(to bottom, var(--color-ink) 0, var(--color-ink) 8px, transparent 8px, transparent 16px);
+}
+
+.timeline-step {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 4px;
+  width: 32px;
+  height: 32px;
+  background: var(--color-mustard);
+  border: 2px solid var(--color-ink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 2px 2px 0px var(--color-ink);
+}
+
+.timeline-content {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-ink);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-hard-sm);
+  margin-left: 0.75rem;
+}
+
+/* ---------------------------------------------------------
+   19. FOOTER CON PERSONALIDAD HUMANA
+   --------------------------------------------------------- */
+.site-footer {
+  background-color: #1A2822;
+  color: #E2ECE5;
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  border-top: 3px solid var(--color-ink);
+  position: relative;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: #FFFDF9;
+  margin-bottom: 1.1rem;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+}
+
+.footer-links-list a:hover {
+  color: var(--color-mustard);
+  text-decoration: underline;
+}
+
+.footer-random-quote-box {
+  background: rgba(255,255,255,0.06);
+  border: 1px dashed rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1.25rem;
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  color: var(--color-mustard);
+  line-height: 1.2;
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: #A3B5AA;
+}
+
+/* ---------------------------------------------------------
+   20. MODAL Y NOTIFICACIONES TOAST
+   --------------------------------------------------------- */
+.toast-notice {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--color-forest);
+  color: #FFFFFF;
+  border: 2px solid var(--color-ink);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow-hard-lg);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  animation: slideToast 0.3s var(--ease-squish);
+}
+
+@keyframes slideToast {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ---------------------------------------------------------
+   21. ACCESIBILIDAD Y RENDIMIENTO
+   --------------------------------------------------------- */
+:focus-visible {
+  outline: 3px solid var(--color-terracotta);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
